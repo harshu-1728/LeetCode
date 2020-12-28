@@ -1,4 +1,4 @@
 # LeetCode
 ### Solution for coding problems.
 
-### Different problems are identified as their names.
+### Different problems are identified by their names.
