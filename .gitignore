@@ -1,3 +1,6 @@
+# Input/Output files
+*.txt
+
 # Prerequisites
 *.d
 
