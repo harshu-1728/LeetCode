@@ -1,11 +1,12 @@
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
-    def lnode(root, x, lvl):
+    def lnode(self, root, x, lvl):
         if root:
             if root.val == x:
                 return lvl
@@ -15,7 +16,7 @@ class Solution:
             return self.lnode(root.right, x, lvl+1)
         return 0
 
-    def sibling(root, x, y):
+    def sibling(self, root, x, y):
         if root:
             if root.left and root.right:
                 return ((root.left.val == x and root.right.val == y) or

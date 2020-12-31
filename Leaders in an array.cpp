@@ -1,14 +1,23 @@
 // Driver Code Starts
 // C++ program to remove recurring digits from
 // a given number
-#include <bits/stdc++.h>
+#include <vector>
+#include <iostream>
 using namespace std;
 
 
  // Driver Code Ends
 
 vector<int> leaders(int arr[], int n){
-    // code here
+    vector<int> ans;
+    int leader = arr[n-1];
+    for (int i = 0; i < n; ++i){
+        if (arr[n-i-1] >= leader){
+            leader = arr[n-i-1];
+            ans.insert(ans.begin(), leader);
+        }
+    }
+    return ans;
 }
 
 
