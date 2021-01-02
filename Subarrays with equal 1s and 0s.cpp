@@ -52,8 +52,8 @@ long long int countSubarrWithEqualZeroAndOne(int arr[], int n)
     cout << count << endl;
     // add the subarrays starting from 1st element and
     // have equal number of 1's and 0's
-    if (um.find(0) != um.end())
-        count += um[0];
+    if (um.find(0) != um.end()) // um.find(key) == um.end() means
+        count += um[0]; // key is not found in unordered_map
 
     // required count of subarrays
     return count;
