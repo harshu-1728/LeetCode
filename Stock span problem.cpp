@@ -33,7 +33,6 @@ vector <int> calculateSpan(int price[], int n)
         // price[i] is greater than elements after
         // top of stack
         S[i] = (st.empty()) ? (i + 1) : (i - st.top());
-        // cout << "stack: " << st << endl;
 
         // Push this element to stack
         st.push(i);
