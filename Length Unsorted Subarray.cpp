@@ -51,7 +51,11 @@ int main() {
         }
         Solution ob;
         auto ans = ob.printUnsorted(arr, n);
-        cout << ans[0] << " " << ans[1] << "\n";
+        for (auto i = ans.begin(); i != ans.end(); ++i){
+            cout << *i << " ";
+        }
+        cout << endl;
+        // cout << ans[0] << " " << ans[1] << "\n";
     }
     return 0;
 }
