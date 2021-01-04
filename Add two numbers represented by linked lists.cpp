@@ -81,24 +81,9 @@ struct Node {
 typedef struct Node node_t;
 struct Node* addTwoLists(struct Node* first, struct Node* second)
 {
-    // code here
     node_t *m1, *m2, *head1, *head2;
     m1 = first;
     m2 = second;
-    // while (m1->next || m2->next){
-    //     if (m1->next == NULL){
-    //         m1->next = (node_t*)malloc(sizeof(node_t));
-    //         m1->next->data = 0;
-    //         m1->next->next = NULL;
-    //     }
-    //     else if (m2->next == NULL){
-    //         m2->next = (node_t*)malloc(sizeof(node_t));
-    //         m2->next->data = 0;
-    //         m2->next->next = NULL;
-    //     }
-    //     m1 = m1->next;
-    //     m2 = m2->next;
-    // }
     head1 = m1 = first;
     m2 = first->next;
     while (m1 && m2){
@@ -115,18 +100,6 @@ struct Node* addTwoLists(struct Node* first, struct Node* second)
         head2 = m2;
         m2 = m1->next;
     }
-    // m1 = head1;
-    // m2 = head2;
-    // while (m1){
-    //     cout << m1->data << " ";
-    //     m1 = m1->next;
-    // }
-    // cout << endl;
-    // while (m2){
-    //     cout << m2->data << " ";
-    //     m2 = m2->next;
-    // }
-    // cout << endl;
     int t1, t2, t3, carry;
     carry = 0;
     node_t *head = (node_t*)malloc(sizeof(node_t));
@@ -168,5 +141,4 @@ struct Node* addTwoLists(struct Node* first, struct Node* second)
         m2 = m1->next;
     }
     return head1;
-    // return NULL;
 }
