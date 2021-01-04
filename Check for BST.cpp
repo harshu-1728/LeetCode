@@ -42,7 +42,7 @@ Node* buildTree(string str)
    queue.push(root);
 
    // Starting from the second element
-   int i = 1;
+   long long unsigned int i = 1;
    while(!queue.empty() && i < ip.size()) {
 
        // Get and remove the front of the queue
@@ -127,6 +127,16 @@ struct Node {
 */
 
 // return true if the given tree is a BST, else return false
+
+bool wrapper(Node *node, int min, int max){
+    if (node == NULL)
+        return 1;
+    if (node->data < min || node->data > max)
+        return 0;
+    return (wrapper(node->left, min, node->data-1) &&
+        wrapper(node->right, node->data-1, max));
+}
+
 bool isBST(Node* root) {
     // Your code here
     return wrapper(root, INT_MIN, INT_MAX);
