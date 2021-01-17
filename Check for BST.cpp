@@ -134,7 +134,7 @@ bool wrapper(Node *node, int min, int max){
     if (node->data < min || node->data > max)
         return 0;
     return (wrapper(node->left, min, node->data-1) &&
-        wrapper(node->right, node->data-1, max));
+        wrapper(node->right, node->data+1, max));
 }
 
 bool isBST(Node* root) {
